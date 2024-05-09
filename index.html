@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Inference</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+          background-image: url('https://t3.ftcdn.net/jpg/00/58/36/88/360_F_58368809_JLfp70GQjwUw6ACsVSUFtxAWwXrTFfaP.jpg');
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        h1{
+            color: white;
+        }
+        form {
+          width: 300px;
+          margin: 0 auto;
+          padding: 20px;
+          background-color: rgba(255, 255, 255, 0.8);
+          border-radius: 5px;
+        }
+        label {
+          display: block;
+          margin-top: 20px;
+        }
+        input[type="file"] {
+          margin-top: 5px;
+        }
+        input[type="submit"] {
+          margin-top: 20px;
+        }
+      </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload Video for Inference</h1>
+        <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept="video/*" required>
+            <button type="submit">Upload</button>
+        </form>
+        <div id="resultContainer"></div>
+    </div>
+</body>
+</html>
